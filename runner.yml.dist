@@ -2,10 +2,11 @@ drupal:
   root: "build"
   base_url: "http://web:8080/build"
   database:
-    host: "mysql"
-    port: "3306"
-    name: "europa_demo"
-    user: "root"
+    scheme: "sqlite"
+    host: "sites/default/files"
+    port: ""
+    name: "database.sqlite"
+    user: ""
     password: ""
   site:
     profile: "config_installer"
