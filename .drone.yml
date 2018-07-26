@@ -43,7 +43,7 @@ pipeline:
     group: test
     image: fpfis/httpd-php-dev:7.1
     commands:
-      - ./vendor/bin/behat
+      - ./vendor/bin/
 
   start-demo:
     group: test
@@ -57,3 +57,14 @@ pipeline:
       event: push
       branch: [ demo-*, debug-* ]
       status: [ success, failure ]
+
+  build-dist:
+    image: fpfis/httpd-php-dev:7.1
+    commands:
+      - ./vendor/bin/run build:dist
+
+  docker-build:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    repo: fpfis/europademo
+    tags: latest
