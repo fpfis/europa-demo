@@ -63,7 +63,7 @@ commands:
     - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
   build:dist:
     - { task: "remove", file: "build/*" }
-    - { task: "run",  command: "composer install --no-dev" }
+    - { task: "run",  command: "composer install" }
     - { task: "copy", from: "css", to: "build/css" }
     - { task: "copy", from: "fonts", to: "build/fonts" }
     - { task: "copy", from: "images", to: "build/images" }

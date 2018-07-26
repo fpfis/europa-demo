@@ -43,7 +43,7 @@ pipeline:
     group: test
     image: fpfis/httpd-php-dev:7.1
     commands:
-      - ./vendor/bin/
+      - ./vendor/bin/behat
 
   start-demo:
     group: test
