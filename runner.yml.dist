@@ -1,4 +1,4 @@
-Com-drupal:
+drupal:
   root: "build"
   base_url: "http://web:8080/build"
   database:
